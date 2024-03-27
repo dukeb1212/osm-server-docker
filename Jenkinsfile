@@ -14,8 +14,8 @@ pipeline {
         stage("Build stage") {
             steps {
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-                    sh 'docker build -t ndminh1212/osm-server:latest .'
-                    sh 'docker push ndminh1212/osm-server:latest'
+                    bat 'docker build -t ndminh1212/osm-server:latest .'
+                    bat 'docker push ndminh1212/osm-server:latest'
                 }
             }
         }
