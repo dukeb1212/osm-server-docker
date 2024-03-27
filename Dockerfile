@@ -75,7 +75,6 @@ RUN mkdir -p /run/renderd/ \
 COPY renderd.conf /etc/renderd.conf
 
 #Using default osm data (Vietnam) and map style
-COPY ./data /data/
 RUN cd /home/src/ && git clone https://github.com/gravitystorm/openstreetmap-carto.git
 COPY ./mapnik.xml /home/src/openstreetmap-carto/
 
