@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     environment {
         DOCKER_IMAGE = "ndminh1212/osm-server"
