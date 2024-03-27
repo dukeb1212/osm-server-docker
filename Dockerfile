@@ -10,7 +10,7 @@ ENV PG_VERSION 15
 RUN apt-get update \
 && apt-get install -y --no-install-recommends \
  ca-certificates gnupg lsb-release locales \
- wget curl \
+ wget curl git-core \
 && locale-gen $LANG && update-locale LANG=$LANG \
 && sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
 && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
