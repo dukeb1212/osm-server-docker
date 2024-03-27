@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Clone stage") {
             steps {
-                git credentialsId: 'osm-server', url: 'https://github.com/dukeb1212/osm-server-docker.git'
+                git 'https://github.com/dukeb1212/osm-server-docker.git'
             }
         }
         stage("Build stage") {
